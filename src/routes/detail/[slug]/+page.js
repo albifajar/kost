@@ -1,12 +1,13 @@
 // @ts-nocheck
 import { error } from '@sveltejs/kit';
+import { PUBLIC_API_URL } from '$env/static/public';
+
 /** @type {import('./$types').PageLoad} */
-export function load({ params }) {
-	if (params.slug === 'hello-world') {
-		return {
-			title: 'Hello world!',
-			content: 'Welcome to our blog. Lorem ipsum dolor sit amet...'
-		};
+export async function load({ params, fetch }) {
+	console.log(PUBLIC_API_URL);
+	if (params?.slug) {
+		const res = await fetch(`${PUBLIC_API_URL}/kost-tujuhs/${params.slug}?populate=*`);
+		return await res.json();
 	}
 	throw error(404, 'Not found');
 }

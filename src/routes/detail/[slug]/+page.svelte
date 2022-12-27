@@ -1,16 +1,14 @@
 <script>
 	// @ts-nocheck
 	/** @type {import('./$types').PageData} */ export let data;
-
+	data = data.data;
+	console.log(data);
 	import { Card, Button, Toggle } from 'flowbite-svelte';
 	let vCard = false;
 </script>
 
 <section class="max-h-screen overflow-y-hidden">
-	<img
-		alt="data"
-		src="https://res.cloudinary.com/dqtst2xq6/image/upload/v1665217359/large_62b2bf34a8cee_cc81e449bb.webp"
-	/>
+	<img alt="data" src={data.attributes.gambar.data.attributes.url} />
 	<div class="-mt-8">
 		<div class="rounded-2xl shadow bg-white z-30 relative px-4 h-96 py-4">
 			<div class="flex justify-center">
