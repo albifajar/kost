@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { build, files, version } from '$service-worker';
 // Create a unique cache name for this deployment
 const CACHE = `cache-${version}`;

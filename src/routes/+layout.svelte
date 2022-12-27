@@ -7,20 +7,14 @@
 <div class="app">
 	<header />
 
-	<main>
-		<slot />
-	</main>
-
-	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-	</footer>
+	<slot />
 </div>
 
 <style>
 	.app {
 		display: flex;
 		flex-direction: column;
-		min-height: 100vh;
+		max-height: 100vh;
 	}
 
 	main {
