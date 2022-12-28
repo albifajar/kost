@@ -27,9 +27,7 @@
 				{description}
 			</p>
 			<div>
-				<span class="text-base font-bold  text-gray-700"
-					>Rp. {price}<small>/{timePeriod}</small></span
-				>
+				<span class="text-base font-bold  text-gray-700">{price}<small>/{timePeriod}</small></span>
 			</div>
 		</div>
 	</a>

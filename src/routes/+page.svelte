@@ -3,6 +3,13 @@
 	/** @type {import('./$types').PageData} */ export let data;
 	import Card from './Card.svelte';
 	import { Alert } from 'flowbite-svelte';
+	const rupiah = (number) => {
+		return new Intl.NumberFormat('id-ID', {
+			style: 'currency',
+			currency: 'IDR',
+			minimumFractionDigits: 0
+		}).format(number);
+	};
 </script>
 
 <svelte:head>
@@ -17,8 +24,7 @@
 				image={record.attributes.gambar.data.attributes.url}
 				title={record.attributes.nama_kosan}
 				description={record.attributes.alamat}
-				price={record.attributes.tarif}
-				tarif={record.attributes.harga}
+				price={rupiah(record.attributes.tarif)}
 				timePeriod={record.attributes.jangka_waktu}
 			/>
 		{/each}

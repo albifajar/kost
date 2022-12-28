@@ -3,7 +3,14 @@
 	/** @type {import('./$types').PageData} */ export let data;
 	data = data.data;
 	import { Card, Button, Toggle } from 'flowbite-svelte';
-	let vCard = false;
+
+	const rupiah = (number) => {
+		return new Intl.NumberFormat('id-ID', {
+			style: 'currency',
+			currency: 'IDR',
+			minimumFractionDigits: 0
+		}).format(number);
+	};
 </script>
 
 <section class="relative max-h-screen min-h-screen overflow-y-hidden">
@@ -49,7 +56,7 @@
 	</div>
 	<div class="bg-yellow-300 w-full px-4 absolute bottom-0 flex justify-between items-center py-4">
 		<span class="text-xl font-bold"
-			>{data.attributes.tarif}<small>/{data.attributes.jangka_waktu}</small></span
+			>{rupiah(data.attributes.tarif)}<small>/{data.attributes.jangka_waktu}</small></span
 		>
 		<Button
 			color="light"
