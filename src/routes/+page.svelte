@@ -9,14 +9,17 @@
 	<title>Home</title>
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
-<main class="py-8 px-4">
+<main class="py-8 px-4 bg-gray-200 min-h-screen">
 	<div class="grid grid-cols-2 gap-4">
 		{#each data.data as record, i}
 			<Card
 				id={record.id}
 				image={record.attributes.gambar.data.attributes.url}
-				title={record.attributes.nama_kost}
-				description={record.attributes.description}
+				title={record.attributes.nama_kosan}
+				description={record.attributes.alamat}
+				price={record.attributes.tarif}
+				tarif={record.attributes.harga}
+				timePeriod={record.attributes.jangka_waktu}
 			/>
 		{/each}
 	</div>

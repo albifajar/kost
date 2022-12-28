@@ -4,23 +4,33 @@
 	export let image;
 	export let description;
 	export let id;
+	export let price;
+	export let timePeriod;
 
 	import { Img } from 'flowbite-svelte';
 	import IconPlus from './IconPlus.svelte';
 	import IconDot from './IconDot.svelte';
-	import { Card, Button, Rating, Badge } from 'flowbite-svelte';
+	import { Card } from 'flowbite-svelte';
 </script>
 
-<section class="border-0 shadow-none">
-	<a href="/detail/{id}">
-		<img class="rounded-lg w-full h-48 object-cover" src={image} alt="product 1" />
-	</a>
-	<div class="mt-2">
-		<a href="/detail/{id}">
-			<h5 class="text-base font-semibold tracking-tight text-gray-900 mt-1">{title}</h5>
-		</a>
-		<div class="flex justify-start items-center gap-2 mt-1">
-			<p>{description}</p>
+<div>
+	<a
+		class="bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-400 rounded-lg border border-gray-200 dark:border-gray-700 shadow-md flex max-w-sm flex-col hover:bg-gray-100 dark:hover:bg-gray-700"
+		href="/detail/{id}"
+	>
+		<img class="rounded-t-lg h-32 object-fit" src={image} alt="" />
+		<div class="p-3">
+			<h5 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+				Pa Haji Dadang
+			</h5>
+			<p class="mb-3 text-sm font-normal text-gray-700 dark:text-gray-400 leading-tight">
+				JL.anggrek No. ... Blok ... RT 01 Rw 01
+			</p>
+			<div>
+				<span class="text-base font-bold  text-gray-700"
+					>Rp. {price}<small>/{timePeriod}</small></span
+				>
+			</div>
 		</div>
-	</div>
-</section>
+	</a>
+</div>
