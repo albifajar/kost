@@ -1,6 +1,6 @@
 {
-	"name": "Kost: Booking kos online",
-	"short_name": "Kost",
+	"name": "Kostan Alfaram",
+	"short_name": "Kostan Alfaram",
 	"icons": [
 		{
 			"src": "/icon-512x512.png",
@@ -13,7 +13,7 @@
 			"type": "image/png"
 		}
 	],
-	"theme_color": "#f26767",
+	"theme_color": "#FCDE24",
 	"background_color": "#ffffff",
 	"display": "standalone",
 	"scope": "/",
