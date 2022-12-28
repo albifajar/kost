@@ -21,10 +21,10 @@
 		<img class="rounded-t-lg h-32 object-fit" src={image} alt="" />
 		<div class="p-3">
 			<h5 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-				Pa Haji Dadang
+				{title}
 			</h5>
 			<p class="mb-3 text-sm font-normal text-gray-700 dark:text-gray-400 leading-tight">
-				JL.anggrek No. ... Blok ... RT 01 Rw 01
+				{description}
 			</p>
 			<div>
 				<span class="text-base font-bold  text-gray-700"
